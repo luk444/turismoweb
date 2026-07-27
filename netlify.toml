@@ -1,0 +1,30 @@
+[build]
+  # Directorio de build de Vite
+  publish = "dist"
+  
+  # Comando de build
+  command = "npm run build"
+
+# Redirecciones para SPA (Single Page Application)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Headers de seguridad
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache para assets estáticos
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Variables de entorno (se configuran en Netlify UI)
+# Ve a: Site settings → Environment variables

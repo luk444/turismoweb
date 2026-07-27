@@ -1,0 +1,15 @@
+{
+  "name": "mendoza-experience-tours-functions",
+  "engines": { "node": "18" },
+  "main": "src/index.ts",
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^4.0.0",
+    "mercadopago": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "~5.6.2",
+    "firebase-functions-test": "^5.0.0"
+  }
+}
